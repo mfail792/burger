@@ -1,7 +1,6 @@
 var express = require("express");
 var mysql = require("mysql");
 var exphbs = require("express-handlebars");
-//did not include bodyparser
 
 var app = express();
 var port = 3000;
@@ -22,6 +21,9 @@ connection.connect(function (err) {
     console.log('Connected as id: ' + connection.threadId);
 })
 
+//engine info
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set("view engine", 'handlebars');
+
+
 
