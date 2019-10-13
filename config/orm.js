@@ -11,8 +11,8 @@ var orm = {
             cb(result);
         });
     },
-    insertOne: function (table, cols, vals, cb) {
-        var queryString = "INSERT INTO " + table;
+    insertOne: function (burgers, cols, vals, cb) {
+        var queryString = "INSERT INTO " + burgers;
 
         queryString += " (";
         queryString += cols.toString();
@@ -32,8 +32,8 @@ var orm = {
         });
     },
 
-    updateOne: function (table, objColVals, condition, cb) {
-        var queryString = "UPDATE " + table;
+    updateOne: function (burgers, objColVals, condition, cb) {
+        var queryString = "UPDATE " + burgers;
 
         queryString += " SET ";
         queryString += objToSql(objColVals);
