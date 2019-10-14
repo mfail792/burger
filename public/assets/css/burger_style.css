@@ -1,0 +1,36 @@
+body {
+    background-color: #dfd81c;
+    font-family: 'Lato', sans-serif;
+}
+
+* {
+    background-color: #dfd81c;
+}
+
+pre {
+    background-color: red;
+    font-size: 1.5em;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    width: 25%;
+}
+
+.form-control[readonly] {
+    color: black;
+    margin: 5px;
+    border: 20px;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+}
+
+#text-enter-button {
+    margin-top: 5px;
+}
+
+p {
+    margin-top: 5px;
+    font-size: 30px;
+}

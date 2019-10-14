@@ -4,8 +4,17 @@ var PORT = process.env.PORT || 3000;
 
 var app = express();
 
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
 // Serves content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
+
+
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+
+app.use(methodOverride("_method"));
 
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));

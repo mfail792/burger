@@ -1,27 +1,26 @@
+//importing the ORM to create the functions that will interact with the database
 var orm = require("../config/orm.js");
 
 var burger = {
-    all: function (cb) {
-        orm.selectAll("burgers", function (res) {
+    selectAll: function (cb) {
+        orm.selectAll(function (res) {
             cb(res);
-
+        });
+    },
+    insertOne: function (burger, cb) {
+        orm.insertOne(burger, function (res) {
+            cb(res);
         });
     },
     updateOne: function (id, cb) {
-        var queryString = "UPDATE burgers SET devoured = true WHERE id = ?";
-
-        connection.query(queryString, [id], function (err, result) {
-            if (err) {
-                throw err;
-            }
-            cb(result);
+        orm.updateOne([id], function (res) {
+            cb(res);
         });
     }
-};
+}
 
 
 module.exports = burger;
-
 // //     },
 
 //     create: function (cols, vals, cb) {
