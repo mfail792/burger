@@ -28,9 +28,21 @@ router.put('/burgers/update', function (req, res) {
 
 
 
+//note: can enter DELETE query here to delete table data and add button to index.handlebars page
+// $("#text-enter").on("click", function(event) {
+//     var id = $(this).data("id");
+
+//     // Send the DELETE request.
+//     $.ajax("/api/burgers/" + id, {
+//       type: "DELETE"
+//     }).then(
+//       function() {
+//         console.log("deleted burger", id);
+//         // Reload the page to get the updated list
+//         location.reload();
 
 
-//note: can input delete table function here
+//   <button type="submit" class="btn btn-primary" id="text-enter-button">Delete</button>
 
 
 module.exports = router;
