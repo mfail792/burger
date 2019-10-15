@@ -35,8 +35,6 @@ var orm = {
     }
 };
 
-module.exports = orm;
-
 //delete function to clear table data
 
 // delete: function(table, condition, cb) {
@@ -54,4 +52,6 @@ module.exports = orm;
 // }
 // };
 
+
+module.exports = orm;
 

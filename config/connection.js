@@ -7,6 +7,7 @@ if (process.nvJAWSDB_URL) {
     connection = mysql.createConnection({
         host: 'localhost',
         user: 'root',
+        port: 3306,
         password: 'vegetable',
         database: "burgers_db"
     });
